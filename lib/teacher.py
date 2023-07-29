@@ -1,10 +1,15 @@
 #!/usr/bin/env python
-
-from user import User
-
+#import ipdb
+from user import User 
 import random
 
-class Teacher(User):
-
+class Teacher(User):   
+ 
+    def __init__(self, first_name, last_name):
+        User.__init__(self, first_name, last_name)
+        
+        
     def teach(self):
-        pass
+        return random.choice(self.knowledge)
+        
+#ipdb.set_trace()
